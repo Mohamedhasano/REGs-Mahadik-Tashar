@@ -1,0 +1,78 @@
+========================================
+  MongoDB Setup - Next Steps
+========================================
+
+Two browser tabs opened for you:
+
+1. MongoDB Atlas (Cloud) - RECOMMENDED ⭐
+2. MongoDB Community (Local Download)
+
+
+OPTION 1: Atlas (5 minutes) ☁️
+------------------------------
+✓ No installation
+✓ Free forever
+✓ Works anywhere
+
+Steps:
+1. Register at Atlas (tab 1)
+2. Create FREE Cluster
+3. Create User:
+   Username: regs_admin
+   Password: Regs2025
+4. Network Access: 0.0.0.0/0
+5. Get Connection String
+6. Run: UPDATE_ENV_FOR_ATLAS.bat
+7. Restart backend
+
+Full guide: MONGODB_ATLAS_SETUP.md
+
+
+OPTION 2: Local (15 minutes) 💻
+---------------------------------
+✓ On your PC
+✓ Unlimited storage
+✓ Offline access
+
+Steps:
+1. Download from tab 2
+   - Version: 7.0.x
+   - Platform: Windows x64
+   - Package: MSI
+2. Run installer
+   - Complete installation
+   - Install as Service ✓
+3. Start service (as Admin):
+   net start MongoDB
+4. Update .env:
+   MONGODB_URI=mongodb://localhost:27017/regs-global
+5. Restart backend
+
+Full guide: MONGODB_LOCAL_INSTALL.md
+
+
+After Either Option:
+--------------------
+1. Update backend/.env file
+2. Restart backend:
+   cd backend
+   npm run dev
+3. Should see:
+   ✅ MongoDB Connected: [your-database]
+
+
+Test It Works:
+--------------
+1. Go to: http://localhost:5173/signup
+2. Create test account
+3. If successful → MongoDB is working! ✅
+
+
+Need Help?
+----------
+Read: START_HERE_MONGODB.md
+
+========================================
+Built with ❤️ for the Muslim Ummah
+========================================
+
